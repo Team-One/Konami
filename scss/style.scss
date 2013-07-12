@@ -1,15 +1,5 @@
 @import "app.scss";
 html{
-<<<<<<< HEAD
-	body{ 
-	section{ @include grid-row;
-		ul{ @include grid-column(10); @include panel;
-			li{ @include grid-column(2);
-				input{}
-				label{}
-				a{
-					@include button-base;
-=======
 	body{
 	h1{text-align:center;} 
 	section{ @include grid-row;
@@ -29,32 +19,10 @@ html{
 				a.remove{
 					float: right;
 					margin-right: -9em;	
->>>>>>> master
 					@include button-size;
 					@include button-style;
 					@include radius;
 					@include single-transition;
-<<<<<<< HEAD
-				}
-			}
-			
-		}
-			section{
-				@include grid-row;
-				padding:.5em;
-
-				span{
-						a.save_sessions {
-							@include grid-column(12);
-							@include button-base;
-							@include button-size;
-							@include button-style;
-							@include radius;
-							@include single-transition;
-						}
-					}
-				}		
-=======
 				}	
 
 		
@@ -66,7 +34,6 @@ html{
 				padding:.5em;
 				span{}
 			}		
->>>>>>> master
 
 	}
 	form{ @include grid-column(12);
@@ -80,11 +47,7 @@ html{
   					@include radius;
   					@include single-transition;
   					@include inset-shadow(#000);
-<<<<<<< HEAD
-					}
-=======
 				}
->>>>>>> master
 			}
 		}
 	}

@@ -9,40 +9,6 @@
 
 </head>  
 <body>
-<<<<<<< HEAD
-<h1>Body by Science - The Big Five Excerise Tracker Live</h1>
-<section id="exercises">
-  <ul data-bind="foreach: exercises">
-    <li>
-    <input type="text" name="Name" placeholder="Chest Press" data-bind="value: name, valueUpdate: 'keyup'" disabled>   
-    <hr/> 
-    <label>Date</label>
-    <input type="text" name="Date" placeholder="7/2/13" data-bind="value: date, valueUpdate: 'keyup'" disabled>
-    <label>Weight</label>
-    <input type="text" name="Weight" placeholder="150 lbs" data-bind="value: weight, valueUpdate: 'keyup'" disabled>
-    <label>Seat Position</label>
-    <input type="text" placeholder="#3" data-bind="value: position, valueUpdate: 'keyup'" disabled>
-    <label>Time Under Load (TUL)</label>
-    <input type="text" name="Time Under Load" placeholder="90 sec" data-bind="value: tul, valueUpdate: 'keyup'" disabled>
-      <a data-bind="click: $parent.removeItem" href="#">[x]</a>
-    </li> 
-  </ul>
-  <span>
-    <a class="save_sessions"href="#">Save Session</a>
-  </span>
-<!-- ko with: exercises.newItem -->     
-  <form data-bind="submit: create">
-    <input type="text" name="Name" placeholder="Chest Press" data-bind="value: name, valueUpdate: 'keyup'">   
-    <hr/> 
-    <label>Date</label>
-    <input id="date" type="text" name="Date" placeholder="7/2/13" data-bind="value: date, valueUpdate: 'keyup'">
-    <label>Weight</label>
-    <input type="text" name="Weight" placeholder="150 lbs" data-bind="value: weight, valueUpdate: 'keyup'">
-    <label>Seat Position</label>
-    <input type="text" placeholder="#3" data-bind="value: position, valueUpdate: 'keyup'">
-    <label>Time Under Load (TUL)</label>
-    <input type="text" name="Time Under Load" placeholder="90 sec" data-bind="value: tul, valueUpdate: 'keyup'">
-=======
 <h1>Konami - Easter Egging at it's best</h1>
 <section id="konami">
 
@@ -57,32 +23,12 @@
     <label>Thumbnail URL</label>
     <input type="text" name="thumb"placeholder="http://dl.dropbox.com/u/980/Screenshots/dtyl~0k65_tp.png"  data-bind="value: thumb, valueUpdate: 'keyup'">
 
->>>>>>> master
     <span class="form-actions">
       <button type="submit">Submit</button>
       <button type="submit">Reset</button>
     </span>
   </form>
 <!-- /ko -->
-<<<<<<< HEAD
-<section/>
-<footer>
-    <p>Made by @robertcedwards</p>
-</footer>
-<script>
-var now = moment().format();
-var url = "https://hit-timer.firebaseio.com/users/robertcedwards/exercises/"
-var firebase = new Firebase(url);
-var viewModel = {
-    "exercises": KnockoutFire.observable(
-        firebase, {
-            "$exercise": {
-                "name": true,
-                "date": true,
-                "weight": true,
-                "position": true,
-                "tul": true
-=======
 
   <ul data-bind="foreach: konami">
 
@@ -117,7 +63,6 @@ var viewModel = {
                 "website": true,
                 "desc": true,
                 "thumb": true
->>>>>>> master
 
             },
             ".newItem": {
@@ -129,15 +74,8 @@ var viewModel = {
         firebase.child(item.firebase.name()).remove();
     }
 };
-<<<<<<< HEAD
-ko.applyBindings(viewModel, document.getElementById("exercises"));
-
-</script>
-
-=======
 ko.applyBindings(viewModel, document.getElementById("konami"));
 
 </script>
->>>>>>> master
 </body>
 </html>
