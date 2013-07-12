@@ -9,6 +9,7 @@
 
 </head>  
 <body>
+<<<<<<< HEAD
 <h1>Body by Science - The Big Five Excerise Tracker Live</h1>
 <section id="exercises">
   <ul data-bind="foreach: exercises">
@@ -41,12 +42,29 @@
     <input type="text" placeholder="#3" data-bind="value: position, valueUpdate: 'keyup'">
     <label>Time Under Load (TUL)</label>
     <input type="text" name="Time Under Load" placeholder="90 sec" data-bind="value: tul, valueUpdate: 'keyup'">
+=======
+<h1>Konami - Easter Egging at it's best</h1>
+<section id="konami">
+
+<!-- ko with: konami.newItem -->     
+  <form data-bind="submit: create">
+    <label>Name</label>
+    <input id="title" type="text" name="title" placeholder="Vogue.com raptor attack" data-bind="value: title, valueUpdate: 'keyup'">
+    <label>Website Url</label>
+    <input type="text" name="website" placeholder="http://vogue.co.uk" data-bind="value: website, valueUpdate: 'keyup'">
+    <label>Description</label>
+    <input type="text" name="desc"placeholder="Vogue Site features a raptor easter egg that pops up random raptors with hats"  data-bind="value: desc, valueUpdate: 'keyup'">
+    <label>Thumbnail URL</label>
+    <input type="text" name="thumb"placeholder="http://dl.dropbox.com/u/980/Screenshots/dtyl~0k65_tp.png"  data-bind="value: thumb, valueUpdate: 'keyup'">
+
+>>>>>>> master
     <span class="form-actions">
       <button type="submit">Submit</button>
       <button type="submit">Reset</button>
     </span>
   </form>
 <!-- /ko -->
+<<<<<<< HEAD
 <section/>
 <footer>
     <p>Made by @robertcedwards</p>
@@ -64,6 +82,42 @@ var viewModel = {
                 "weight": true,
                 "position": true,
                 "tul": true
+=======
+
+  <ul data-bind="foreach: konami">
+
+    <li>
+        <a class="remove" data-bind="click: $parent.removeItem" href="#">[x]</a>        
+        <h2 data-bind="text: title"></h2>
+
+    </li>
+    <li>
+    
+    </li>
+    <li>
+        <label>Description</label>
+        <p type="text" data-bind="text: desc"></p>
+        <a name="thumb" data-bind="attr:{href: website}">
+            <img data-bind="attr:{src: thumb}"/>     
+        </a>
+   <hr/>
+    </li>
+  </ul>
+
+</section>
+<script>
+var now = moment().format();
+var url = "https://konami-codes.firebaseio.com/"
+var firebase = new Firebase(url);
+var viewModel = {
+    "konami": KnockoutFire.observable(
+        firebase, {
+            "$konami": {
+                "title": true,
+                "website": true,
+                "desc": true,
+                "thumb": true
+>>>>>>> master
 
             },
             ".newItem": {
@@ -75,9 +129,15 @@ var viewModel = {
         firebase.child(item.firebase.name()).remove();
     }
 };
+<<<<<<< HEAD
 ko.applyBindings(viewModel, document.getElementById("exercises"));
 
 </script>
 
+=======
+ko.applyBindings(viewModel, document.getElementById("konami"));
+
+</script>
+>>>>>>> master
 </body>
 </html>
