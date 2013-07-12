@@ -9,9 +9,16 @@ html{
 				float:left;
 				input{}
 				label{}
+				img{
+					@include grid-column(10);
+					padding-bottom: 1em;
+				}
+				hr{padding: 1em 0em 0em 0em}
 
 			}
-				a{	
+				a.remove{
+					float: right;
+					margin-right: -9em;	
 					@include button-size;
 					@include button-style;
 					@include radius;

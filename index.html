@@ -15,11 +15,14 @@
 <!-- ko with: konami.newItem -->     
   <form data-bind="submit: create">
     <label>Name</label>
-    <input id="title" type="text" name="title" placeholder="7/2/13" data-bind="value: title, valueUpdate: 'keyup'">
+    <input id="title" type="text" name="title" placeholder="Vogue.com raptor attack" data-bind="value: title, valueUpdate: 'keyup'">
     <label>Website Url</label>
-    <input type="text" name="website" placeholder="http://www.vogue.com" data-bind="value: website, valueUpdate: 'keyup'">
+    <input type="text" name="website" placeholder="http://vogue.co.uk" data-bind="value: website, valueUpdate: 'keyup'">
     <label>Description</label>
     <input type="text" name="desc"placeholder="Vogue Site features a raptor easter egg that pops up random raptors with hats"  data-bind="value: desc, valueUpdate: 'keyup'">
+    <label>Thumbnail URL</label>
+    <input type="text" name="thumb"placeholder="http://dl.dropbox.com/u/980/Screenshots/dtyl~0k65_tp.png"  data-bind="value: thumb, valueUpdate: 'keyup'">
+
     <span class="form-actions">
       <button type="submit">Submit</button>
       <button type="submit">Reset</button>
@@ -28,20 +31,22 @@
 <!-- /ko -->
 
   <ul data-bind="foreach: konami">
+
     <li>
-        <label>Name</label>
-        <input type="text" name="title" placeholder="Vogue.com raptor attack" data-bind="value: title, valueUpdate: 'keyup'" disabled>
+        <a class="remove" data-bind="click: $parent.removeItem" href="#">[x]</a>        
+        <h2 data-bind="text: title"></h2>
+
     </li>
     <li>
-        <label>Website Url</label>
-        <input type="text" name="website"data-bind="value: website, valueUpdate: 'keyup'" disabled>
+    
     </li>
     <li>
         <label>Description</label>
-        <input type="text" data-bind="value: desc, valueUpdate: 'keyup'" disabled>
-        <a data-bind="click: $parent.removeItem" href="#">[x]</a>        
+        <p type="text" data-bind="text: desc"></p>
+        <a name="thumb" data-bind="attr:{href: website}">
+            <img data-bind="attr:{src: thumb}"/>     
+        </a>
    <hr/>
-
     </li>
   </ul>
 
@@ -56,7 +61,8 @@ var viewModel = {
             "$konami": {
                 "title": true,
                 "website": true,
-                "desc": true
+                "desc": true,
+                "thumb": true
 
             },
             ".newItem": {
