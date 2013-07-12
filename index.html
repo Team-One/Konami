@@ -9,58 +9,54 @@
 
 </head>  
 <body>
-<h1>Body by Science - The Big Five Excerise Tracker Live</h1>
-<section id="exercises">
-  <ul data-bind="foreach: exercises">
-    <li>
-    <input type="text" name="Name" placeholder="Chest Press" data-bind="value: name, valueUpdate: 'keyup'" disabled>   
-    <hr/> 
-    <label>Date</label>
-    <input type="text" name="Date" placeholder="7/2/13" data-bind="value: date, valueUpdate: 'keyup'" disabled>
-    <label>Weight</label>
-    <input type="text" name="Weight" placeholder="150 lbs" data-bind="value: weight, valueUpdate: 'keyup'" disabled>
-    <label>Seat Position</label>
-    <input type="text" placeholder="#3" data-bind="value: position, valueUpdate: 'keyup'" disabled>
-    <label>Time Under Load (TUL)</label>
-    <input type="text" name="Time Under Load" placeholder="90 sec" data-bind="value: tul, valueUpdate: 'keyup'" disabled>
-      <a data-bind="click: $parent.removeItem" href="#">[x]</a>
-    </li> 
-  </ul>
-  <span>
-    <a class="save_sessions"href="#">Save Session</a>
-  </span>
-<!-- ko with: exercises.newItem -->     
+<h1>Konami - Easter Egging at it's best</h1>
+<section id="konami">
+
+<!-- ko with: konami.newItem -->     
   <form data-bind="submit: create">
-    <input type="text" name="Name" placeholder="Chest Press" data-bind="value: name, valueUpdate: 'keyup'">   
-    <hr/> 
-    <label>Date</label>
-    <input id="date" type="text" name="Date" placeholder="7/2/13" data-bind="value: date, valueUpdate: 'keyup'">
-    <label>Weight</label>
-    <input type="text" name="Weight" placeholder="150 lbs" data-bind="value: weight, valueUpdate: 'keyup'">
-    <label>Seat Position</label>
-    <input type="text" placeholder="#3" data-bind="value: position, valueUpdate: 'keyup'">
-    <label>Time Under Load (TUL)</label>
-    <input type="text" name="Time Under Load" placeholder="90 sec" data-bind="value: tul, valueUpdate: 'keyup'">
+    <label>Name</label>
+    <input id="title" type="text" name="title" placeholder="7/2/13" data-bind="value: title, valueUpdate: 'keyup'">
+    <label>Website Url</label>
+    <input type="text" name="website" placeholder="http://www.vogue.com" data-bind="value: website, valueUpdate: 'keyup'">
+    <label>Description</label>
+    <input type="text" name="desc"placeholder="Vogue Site features a raptor easter egg that pops up random raptors with hats"  data-bind="value: desc, valueUpdate: 'keyup'">
     <span class="form-actions">
       <button type="submit">Submit</button>
       <button type="submit">Reset</button>
     </span>
   </form>
 <!-- /ko -->
-<section/>
+
+  <ul data-bind="foreach: konami">
+    <li>
+        <label>Name</label>
+        <input type="text" name="title" placeholder="Vogue.com raptor attack" data-bind="value: title, valueUpdate: 'keyup'" disabled>
+    </li>
+    <li>
+        <label>Website Url</label>
+        <input type="text" name="website"data-bind="value: website, valueUpdate: 'keyup'" disabled>
+    </li>
+    <li>
+        <label>Description</label>
+        <input type="text" data-bind="value: desc, valueUpdate: 'keyup'" disabled>
+        <a data-bind="click: $parent.removeItem" href="#">[x]</a>        
+   <hr/>
+
+    </li>
+  </ul>
+
+</section>
 <script>
 var now = moment().format();
-var url = "https://hit-timer.firebaseio.com/users/robertcedwards/exercises/"
+var url = "https://konami-codes.firebaseio.com/"
 var firebase = new Firebase(url);
 var viewModel = {
-    "exercises": KnockoutFire.observable(
+    "konami": KnockoutFire.observable(
         firebase, {
-            "$exercise": {
-                "name": true,
-                "date": true,
-                "weight": true,
-                "position": true,
-                "tul": true
+            "$konami": {
+                "title": true,
+                "website": true,
+                "desc": true
 
             },
             ".newItem": {
@@ -72,7 +68,7 @@ var viewModel = {
         firebase.child(item.firebase.name()).remove();
     }
 };
-ko.applyBindings(viewModel, document.getElementById("exercises"));
+ko.applyBindings(viewModel, document.getElementById("konami"));
 
 </script>
 </body>

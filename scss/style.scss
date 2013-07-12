@@ -1,36 +1,32 @@
 @import "app.scss";
 html{
-	body{ 
+	body{
+	h1{text-align:center;} 
 	section{ @include grid-row;
 		ul{ @include grid-column(10); @include panel;
-			li{ @include grid-column(2);
+			li{ 
+				@include grid-column(10);
+				float:left;
 				input{}
 				label{}
-				a{
-					@include button-base;
+
+			}
+				a{	
 					@include button-size;
 					@include button-style;
 					@include radius;
 					@include single-transition;
-				}
-			}
-			
+				}	
+
+		
 		}
+			
+		
 			section{
 				@include grid-row;
 				padding:.5em;
-
-				span{
-						a.save_sessions {
-							@include grid-column(12);
-							@include button-base;
-							@include button-size;
-							@include button-style;
-							@include radius;
-							@include single-transition;
-						}
-					}
-				}		
+				span{}
+			}		
 
 	}
 	form{ @include grid-column(12);
@@ -44,7 +40,7 @@ html{
   					@include radius;
   					@include single-transition;
   					@include inset-shadow(#000);
-					}
+				}
 			}
 		}
 	}
