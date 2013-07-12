@@ -18,7 +18,6 @@ html{
 			}
 				a.remove{
 					float: right;
-					margin-right: -9em;	
 					@include button-size;
 					@include button-style;
 					@include radius;

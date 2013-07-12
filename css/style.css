@@ -6769,7 +6769,6 @@ html body section ul li hr {
 /* line 19, ../scss/style.scss */
 html body section ul a.remove {
   float: right;
-  margin-right: -9em;
   padding-top: 0.75em;
   padding-right: 1.5em;
   padding-bottom: 0.8125em;
@@ -6792,7 +6791,7 @@ html body section ul a.remove:hover, html body section ul a.remove:focus {
 html body section ul a.remove:hover, html body section ul a.remove:focus {
   color: white;
 }
-/* line 32, ../scss/style.scss */
+/* line 31, ../scss/style.scss */
 html body section section {
   width: 100%;
   margin-left: auto;
@@ -6812,7 +6811,7 @@ html body section section:before, html body section section:after {
 html body section section:after {
   clear: both;
 }
-/* line 39, ../scss/style.scss */
+/* line 38, ../scss/style.scss */
 html body form {
   position: relative;
   padding-left: 0.9375em;
@@ -6820,7 +6819,7 @@ html body form {
   width: 100%;
   float: left;
 }
-/* line 43, ../scss/style.scss */
+/* line 42, ../scss/style.scss */
 html body form section button {
   border-style: solid;
   border-width: 1px;
