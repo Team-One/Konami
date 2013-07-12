@@ -34,7 +34,6 @@
 <!-- /ko -->
   <ul data-bind="foreach: konami">
     <li>
-        <a class="remove" data-bind="click: $parent.removeItem" href="#">[x]</a>
     </li>        
     <li>
         <h2 data-bind="text: title"></h2>
@@ -45,6 +44,7 @@
         <a name="thumb" data-bind="attr:{href: website}">
             <img data-bind="attr:{src: thumb}"/>     
         </a>
+        <a class="remove" data-bind="click: $parent.removeItem" href="#">[x]</a>        
         <hr/>
     </li>
   </ul>
