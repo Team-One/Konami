@@ -430,7 +430,7 @@ body {
 
 /* line 249, ../scss/foundation/components/_global.scss */
 body {
-  background: white;
+  background: default;
   color: #222222;
   padding: 0;
   margin: 0;
@@ -6686,6 +6686,10 @@ a.th {
   max-width: 800px;
 }
 
+/* line 3, ../scss/style.scss */
+html body {
+  background-image: url("../images/squairy_light_@2X.png");
+}
 /* line 4, ../scss/style.scss */
 html body h1 {
   text-align: center;
@@ -6714,7 +6718,7 @@ html body section ul {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 83.33333%;
+  width: 100%;
   float: left;
   border-style: solid;
   border-width: 1px;
@@ -6749,11 +6753,19 @@ html body section ul li {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 83.33333%;
+  width: 100%;
   float: left;
   float: left;
 }
-/* line 12, ../scss/style.scss */
+/* line 10, ../scss/style.scss */
+html body section ul li h2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 66.66667%;
+  float: left;
+}
+/* line 13, ../scss/style.scss */
 html body section ul li img {
   position: relative;
   padding-left: 0.9375em;
@@ -6762,13 +6774,14 @@ html body section ul li img {
   float: left;
   padding-bottom: 1em;
 }
-/* line 16, ../scss/style.scss */
+/* line 17, ../scss/style.scss */
 html body section ul li hr {
   padding: 1em 0em 0em 0em;
 }
-/* line 19, ../scss/style.scss */
+/* line 20, ../scss/style.scss */
 html body section ul a.remove {
-  float: right;
+  position: absolute;
+  right: 0;
   padding-top: 0.75em;
   padding-right: 1.5em;
   padding-bottom: 0.8125em;
@@ -6791,7 +6804,7 @@ html body section ul a.remove:hover, html body section ul a.remove:focus {
 html body section ul a.remove:hover, html body section ul a.remove:focus {
   color: white;
 }
-/* line 31, ../scss/style.scss */
+/* line 33, ../scss/style.scss */
 html body section section {
   width: 100%;
   margin-left: auto;
@@ -6811,7 +6824,7 @@ html body section section:before, html body section section:after {
 html body section section:after {
   clear: both;
 }
-/* line 38, ../scss/style.scss */
+/* line 40, ../scss/style.scss */
 html body form {
   position: relative;
   padding-left: 0.9375em;
@@ -6819,7 +6832,7 @@ html body form {
   width: 100%;
   float: left;
 }
-/* line 42, ../scss/style.scss */
+/* line 44, ../scss/style.scss */
 html body form section button {
   border-style: solid;
   border-width: 1px;

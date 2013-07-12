@@ -1,12 +1,13 @@
 @import "app.scss";
 html{
-	body{
+	body{ background-image:url('../images/squairy_light_@2X.png');
 	h1{text-align:center;} 
 	section{ @include grid-row;
-		ul{ @include grid-column(10); @include panel;
+		ul{ @include grid-column(12); @include panel;
 			li{ 
-				@include grid-column(10);
+				@include grid-column(12);
 				float:left;
+				h2{@include grid-column(8);}
 				input{}
 				label{}
 				img{
@@ -17,7 +18,8 @@ html{
 
 			}
 				a.remove{
-					float: right;
+					position:absolute;
+					right:0;
 					@include button-size;
 					@include button-style;
 					@include radius;

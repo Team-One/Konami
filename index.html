@@ -9,6 +9,7 @@
 
 </head>  
 <body>
+<nav class="top-bar" data-options="is_hover:false"><a href="/">コナミ株式会社</a></nav>    
 <h1>Konami - Easter Egging at it's best</h1>
 <section id="konami">
 <!-- ko with: konami.newItem -->     
@@ -29,7 +30,9 @@
 <!-- /ko -->
   <ul data-bind="foreach: konami">
     <li>
-        <a class="remove" data-bind="click: $parent.removeItem" href="#">[x]</a>        
+        <a class="remove" data-bind="click: $parent.removeItem" href="#">[x]</a>
+    </li>        
+    <li>
         <h2 data-bind="text: title"></h2>
     </li>
     <li>
